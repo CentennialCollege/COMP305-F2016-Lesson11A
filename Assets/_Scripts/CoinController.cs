@@ -19,15 +19,13 @@ public class CoinController : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other) {
 		if (other.gameObject.CompareTag ("Player")) {
-
 			StartCoroutine (PlayCoinSound ());
-
-
 		}
 
 
 	}
 
+	// CoRoutine
 	IEnumerator PlayCoinSound() {
 		CoinSound.Play ();
 		yield return this.waitTime;

@@ -52,6 +52,7 @@
      <Compile Include="Assets\_Imported Assets\Assets_FPS_Effects\Scripts\controller.cs" />
      <Compile Include="Assets\_Imported Assets\Assets_FPS_Effects\Scripts\explode.cs" />
      <Compile Include="Assets\_Imported Assets\Assets_FPS_Effects\Scripts\explosion_light.cs" />
+     <Compile Include="Assets\_Imported Assets\SFRifle2\rotator.cs" />
      <Compile Include="Assets\_Imported Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\_Imported Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
      <Compile Include="Assets\_Imported Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />

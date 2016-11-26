@@ -11,8 +11,12 @@ public class PlayerShooting : MonoBehaviour {
 	public GameObject BulletImpact;
 	public AudioSource RifleShotSound;
 	public Transform PlayerCam;
+	public LineRenderer Laser;
 
 	// PRIVATE VARIABLES
+
+	private WaitForSeconds waitTime = new WaitForSeconds (0.1f);
+	private float LaserRange = 50.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +27,8 @@ public class PlayerShooting : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1")) {
 			// show the MuzzleFlash at the FlashPoint without any rotation
 			Instantiate (this.MuzzleFlash, this.FlashPoint.position, Quaternion.identity);
+
+			Laser.SetPosition (0, this.FlashPoint.position);
 
 			// need a variable to hold the location of our Raycast Hit
 			RaycastHit hit;
@@ -37,11 +43,16 @@ public class PlayerShooting : MonoBehaviour {
 					Instantiate (this.BulletImpact, hit.point, Quaternion.identity);
 				}
 
+				Laser.SetPosition (1, hit.point);
 
+			} else {
+				Laser.SetPosition(1, this.PlayerCam.position + (this.PlayerCam.forward * this.LaserRange));
 			}
 
 			// Play Rifle Sound
 			this.RifleShotSound.Play();
+
+			StartCoroutine (ShotEffect ());
 		}
 	}
 
@@ -50,6 +61,12 @@ public class PlayerShooting : MonoBehaviour {
 			SceneManager.LoadScene ("OutDoor");	
 		}
 
+	}
+
+	IEnumerator ShotEffect() {
+		Laser.enabled = true;
+		yield return this.waitTime;
+		Laser.enabled = false;
 	}
 
 }
