@@ -46,7 +46,10 @@ public class PlayerShooting : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		SceneManager.LoadScene ("OutDoor");	
+		if (other.gameObject.CompareTag ("Exit")) {
+			SceneManager.LoadScene ("OutDoor");	
+		}
+
 	}
 
 }

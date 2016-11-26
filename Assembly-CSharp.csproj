@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CA40CE34-AE16-0B7B-B5C8-A5197E344287}</ProjectGuid>
+    <ProjectGuid>{A12CACC8-7041-69B1-346E-4FA279067C49}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -100,6 +100,7 @@
      <Compile Include="Assets\_Imported Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\_Imported Assets\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\_Imported Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\_Scripts\CoinController.cs" />
      <Compile Include="Assets\_Scripts\EnemyController.cs" />
      <Compile Include="Assets\_Scripts\FollowPlayer.cs" />
      <Compile Include="Assets\_Scripts\PlayerShooting.cs" />
